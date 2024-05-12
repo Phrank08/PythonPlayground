@@ -21,15 +21,17 @@ elif GenerateNumber != GuessedNumber:
 def GuessTheNumber(x):
     GuessTheNumber = random.randint(1,x)
     guess = 0
+    trial = 0
 
     while GuessTheNumber != guess:
         guess = int(input("Enter a number: "))
+        trial +=1
         if guess > GuessTheNumber:
             print("Sorry! Too high guess again")
         elif guess < GuessTheNumber:
             print("Sorry! Too low guess again")
 
-    print(f"Congrats! You've guessed the number {guess} correctly")
+    print(f"Congrats! You've guessed the number {guess} correctly on {trial} trial")
 
     
 GuessTheNumber(10)
